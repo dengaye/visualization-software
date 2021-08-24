@@ -1,0 +1,33 @@
+{
+  "name": "visualization-software",
+  "version": "1.0.0",
+  "description": "3D 可视化软件",
+  "main": "main.js",
+  "scripts": {
+    "start": "API_ENV=development electron .",
+    "build": "API_ENV=production electron-builder --mac --x64"
+  },
+  "build": {
+    "appId": "com.deme.app",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
+  "repository": "",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "electron": "^8.2.3",
+    "electron-builder": "^22.4.1"
+  }
+}

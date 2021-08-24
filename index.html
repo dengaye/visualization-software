@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>3D 可视化软件</title>
+    <link rel="stylesheet" type="text/css" href="./src/style/index.css"></link>
+  </head>
+  <body class="dark-theme">
+    <header class="header">
+      <ul class="nav">
+        <li class="nav-item">
+          File
+          <div class="nav-hover">
+            <div class="nav-hover-item">
+              open
+              <input type="file" id="uploadFile" accept=""/>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          View
+          <div class="nav-hover" id="theme">
+            <div class="nav-hover-item" id="lightThemeBtn">Light theme</div>
+            <div class="nav-hover-item" id="darkThemeBtn">Dark theme</div>
+          </div>
+        </li>
+        <li class="nav-item">
+          Render
+          <div class="nav-hover" id="actionContent">
+            <div class="nav-hover-item" id="lineBtn">Line</div>
+            <div class="nav-hover-item" id="sphereBtn">Sphere</div>
+            <div class="nav-hover-item" id="resetBtn">Reset</div>
+          </div>
+        </li>
+        <li class="nav-item">
+          Examples
+          <div class="nav-hover" id="testModal">
+            <div class="nav-hover-item" data-index="0">Demo1</div>
+            <div class="nav-hover-item" data-index="1"">Demo2</div>
+            <div class="nav-hover-item" data-index="2"">Demo3</div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <div id="root" class="container">
+      <div class="loading" id="loading">
+        <img src="./src/image/loading.gif" alt="">
+        loading...
+      </div>
+    </div>
+    <script type="module" src="./src/libs/three.js"></script>
+    <script type="module"  src="./src/start.js"></script>
+  </body>
+</html>

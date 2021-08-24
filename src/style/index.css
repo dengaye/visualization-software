@@ -1,0 +1,111 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+li {
+	list-style: none;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-size: 12px;
+	background-color: #000000;
+}
+
+.header {
+	line-height: 30px;
+}
+.nav {
+	display: flex;
+}
+.nav-item {
+	padding: 0 10px;
+	cursor: pointer;
+	position: relative;
+}
+.nav-item:hover .nav-hover{
+	display: block;
+}
+.nav-hover {
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	display: none;
+	overflow: hidden;
+	font-size: 12px;
+}
+.nav-hover-item {
+	padding: 5px;
+	width: 80px;
+}
+
+input {
+	cursor: pointer;
+	padding: 1vh;
+	position: absolute;
+	font-size: 100px;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.container {
+	width: 100vw;
+	height: 90vh;
+	position: relative;
+	font-size: 20px;
+}
+
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.light-theme {
+	background-color: #ffffff;
+	color: #0d0d0d;
+}
+.light-theme .header {
+	background: #eeeeee;
+}
+.light-theme .nav-hover{
+	background: #ccc;
+	color: #0d0d0d;
+}
+.light-theme .nav-hover-item:hover {
+	background-color: #dddddd;
+}
+.light-theme .loading {
+	background-color: #ffffff;
+}
+
+.dark-theme {
+	background-color: #000000;
+	color: #f2f2f2;
+}
+.dark-theme .header {
+	background: #1b1e25;
+}
+.dark-theme .nav-hover{
+	background: #1b1e25;
+	color: #f2f2f2;
+}
+.dark-theme .nav-hover-item:hover {
+	background-color: #737988;
+}
+.dark-theme .loading {
+	background-color: #000;
+}
